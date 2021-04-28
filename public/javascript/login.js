@@ -1,0 +1,1 @@
+// this should contain front end js for loging in current user or creating a new one

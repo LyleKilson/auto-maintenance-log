@@ -1,0 +1,1 @@
+// this should contain front end js for logging out an active user
