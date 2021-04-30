@@ -1,0 +1,1 @@
+class MaintenanceLog extends moalAssertion()
