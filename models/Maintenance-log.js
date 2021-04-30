@@ -1,1 +1,1 @@
-// model for maintenace log
+class MaintenanceLog extends moalAssertion()
