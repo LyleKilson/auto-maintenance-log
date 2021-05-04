@@ -58,6 +58,7 @@ router.post('/', (req, res) => {
     })
 });
 
+<<<<<<< HEAD
 router.post('/login', (req,res) => {
 Owner.findOne({
     where: {
@@ -89,6 +90,8 @@ return;
   });
   
 });
+=======
+>>>>>>> feature/api-routes
 module.exports = router;
 
 
