@@ -39,6 +39,56 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.post('/', (req, res) => {
+    Owner.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password 
+    })
+    .then(newOwnerData => {
+        req.session.save(() => { 
+        req.session.user_id = newOwnerData;
+        req.session.username = newOwnerData.username;
+        req.session.loggedIn = true;
+      })
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
+
+router.post('/login', (req,res) => {
+Owner.findOne({
+    where: {
+        email: req.body.email
+    }
+})
+.then(dbOwner => {
+    if(!dbOwner) {
+   res.status(400).json({message: 'no user with that email'});
+   return;
+    }
+    const goodPassword = dbOwner.checkPassword(req.body.password);
+    if(!goodPassword) {
+res.status(400).json({message: 'incorrect password'});
+return;
+    } 
+    req.session.save(() => {
+        // here we declare session variables
+        req.session.user_id = dbOwner.id;
+        req.session.username = dbOwner.username;
+        req.session.loggedIn = true;
+
+        res.json({user: dbOwner, message: 'you are now logged in!'});
+    })
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err)
+  });
+  
+});
 module.exports = router;
 
 
