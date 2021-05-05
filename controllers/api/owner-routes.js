@@ -50,6 +50,8 @@ router.post('/', (req, res) => {
         req.session.user_id = newOwnerData;
         req.session.username = newOwnerData.username;
         req.session.loggedIn = true;
+
+        res.json(newOwnerData)
       })
     })
     .catch(err => {
@@ -58,7 +60,6 @@ router.post('/', (req, res) => {
     })
 });
 
-<<<<<<< HEAD
 router.post('/login', (req,res) => {
 Owner.findOne({
     where: {
@@ -90,8 +91,6 @@ return;
   });
   
 });
-=======
->>>>>>> feature/api-routes
 module.exports = router;
 
 
