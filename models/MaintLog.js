@@ -16,7 +16,7 @@ MaintLog.init(
         },
         last_oil_change: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: false
         },
         last_tire_rotation: {
             type: DataTypes.INTEGER,
