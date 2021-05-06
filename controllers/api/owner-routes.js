@@ -78,7 +78,7 @@ return;
     } 
     req.session.save(() => {
         // here we declare session variables
-        req.session.user_id = dbOwner.id;
+        req.session.owner_id = dbOwner.id;
         req.session.username = dbOwner.username;
         req.session.loggedIn = true;
 
