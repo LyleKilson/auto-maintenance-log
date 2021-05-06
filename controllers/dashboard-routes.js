@@ -4,7 +4,11 @@ const sequelize= require('../config/connection');
 const { Owner, Vehicle, MaintLog } = require('../models');
 
 router.get('/', (req, res) => {
-    res.render('dashboard');
+    res.render('dashboard',{loggedIn: true})
 })
 
 module.exports = router;
+
+
+
+
