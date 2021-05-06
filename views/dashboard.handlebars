@@ -28,8 +28,8 @@
   <ol>
     {{#each vehicle as |vehicles|}}
     <li>
-  <!--    {{> vehicle-info vehicles}} when clicking here a single vehicle and it log should be viewed i will use a partial-->
-      <a href="/dashboard/edit/{{vehicle.id}}" class="edit-link">My cool Cars</a>
+    {{> vehicle-info vehicles}} 
+      <a href="/dashboard/log/{{vehicle.id}}" class="edit-link">maintenance log</a>
     </li>
     {{/each}}
   </ol>
