@@ -11,7 +11,7 @@
     color: #0d305c;
   }
   
-  a {
+  header a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -22,7 +22,7 @@
     color: #3486eb;
   }
   
-  button {
+  button, .button {
     background-color: #0d305c;;
     border: 0;
     padding: 1%;
@@ -85,10 +85,18 @@
     align-items: center;
     padding: 0 1%;
     background-color: #0d305c;
-    
+    width: 100%;
+    color:white;
    
   }
-  
+  .welcome{
+    text-align: center;
+    font-family: fantasy;
+    color:#0d305c;
+  }
+  .sign.a{
+    color:#0d305c;
+  }
   header h1 {
     font-size: 1em;
     text-align: left;
