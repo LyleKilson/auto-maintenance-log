@@ -37,7 +37,7 @@ router.post('/', (req, res) => {
         make: req.body.make,
         model: req.body.model,
         year: req.body.year,
-        owner_id: req.body.owner_id
+        owner_id: req.session.owner_id
     })
     .then(dbVehicleData => res.json(dbVehicleData))
     .catch(err => {
