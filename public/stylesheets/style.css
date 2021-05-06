@@ -13,7 +13,7 @@
   
   a {
     text-decoration: none;
-    color: #0d305c;
+    color: white;
     font-weight: bold;
     transition: color 0.1s;
   }
@@ -23,18 +23,19 @@
   }
   
   button {
-    background-color: #225ca3;
+    background-color: #0d305c;;
     border: 0;
     padding: 1%;
     color: white;
     font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: background-color 0.1s;
     cursor: pointer;
     border-radius: 5px;
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: lightgray;
   }
   
   .post-list {
@@ -83,6 +84,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+    background-color: #0d305c;
+    
    
   }
   
@@ -180,5 +183,7 @@
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+    background-color: #0d305c;
+    color: white;
   }
   
