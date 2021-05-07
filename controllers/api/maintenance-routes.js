@@ -5,7 +5,7 @@ const {Owner, Vehicle, MaintLog} = require('../../models');
 
 router.get('/' ,(req, res) => {
  MaintLog.findAll({
-     attributes: ['id','last_oil_change', 'last_tire_rotation', 'last_spark_plugs', 'last_air_filter', 'notes', 'vehicle_id']
+     attributes: ['id','last_oil_change', 'last_tire_rotation', 'last_spark_plugs', 'last_air_filter', 'notes', 'vehicle_id', 'owner_id']
  })
  .then(dbMaintData => res.json(dbMaintData))
  .catch(err => {
@@ -23,7 +23,8 @@ router.post('/', (req, res) => {
         last_spark_plugs: req.body.last_spark_plugs,
         last_air_filter: req.body.last_air_filter,
         notes: req.body.notes,
-        vehicle_id: req.body.vehicle_id
+        vehicle_id: req.body.vehicle_id,
+        owner_id: req.session.owner_id
     })
     .then(newMaintLog => res.json(newMaintLog))
     .catch(err => {

@@ -4,6 +4,7 @@ const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
+
 class MaintLog extends Model{}
 
 MaintLog.init(
@@ -41,6 +42,13 @@ MaintLog.init(
               key: 'id'
           }
           
+      },
+      owner_id: {
+          type: DataTypes.INTEGER,
+          references: {
+              model: 'owner',
+              key: 'id'      
+          }
       }
     },
     {

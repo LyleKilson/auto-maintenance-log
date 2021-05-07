@@ -28,12 +28,12 @@
   <ol>
     {{#each vehicle as |vehicles|}}
     <li>
-    {{> vehicle-info vehicles}} 
+    {{> vehicle-info vehicles}}
       <a href="/dashboard/log/{{vehicle.id}}" class="edit-link">maintenance log</a>
+      {{> maint-log vehicles}} 
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
-
 <script src="/javascript/add-vehicle.js" ></script>
