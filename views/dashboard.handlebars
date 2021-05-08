@@ -17,13 +17,12 @@
       <label for="post-url">year</label>
        <input type="text" id="year" name="post-title" />
     </div>
-    <div> 
-    <h2>Maintenance Details</h2>
-    </div>
-
-    <button type="submit" class="btn">Create</button>
-  </form>
+ <button type="submit" class="btn">Create</button>
+ </form>
 </section>
+   
+
+   
 
 {{#if vehicle.length}}
 <section>
@@ -32,9 +31,9 @@
     {{#each vehicle as |vehicles|}}
     <li>
     {{> vehicle-info vehicles}}
-      <a href="/dashboard/log/{{vehicle.id}}" class="edit-link">maintenance log</a>
-      {{> maint-log vehicles}} 
-    </li>
+      <a href="/maintlog" class="edit-link">maintenance log</a>
+      
+      </li>
     {{/each}}
   </ol>
 </section>

@@ -31,19 +31,7 @@ router.get('/', (req, res) => {
     });
 });
 
-/*outer.get('/', (req, res) => {
-    MaintLog.findAll({
-      
-        attributes:  ['id','last_oil_change', 'last_tire_rotation', 'last_spark_plugs', 'last_air_filter', 'notes', 'vehicle_id', 'owner_id']
-    }).then( dbMaintData => {
-        const maintlog = dbMaintData.map(maintlog => maintlog.get({plain: true}))
-        res.render('dashboard', {maintlog, loggedIn: true})
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })
-})*/
+
 
 module.exports = router;
 

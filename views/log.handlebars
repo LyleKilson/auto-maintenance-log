@@ -1,0 +1,34 @@
+<section> 
+<h2>Maintenance Details</h2>
+<form class="log" method="post"> 
+    <div>
+      <label for="post-title">Last oil Change</label>
+      <input type="text" id="oil" name="oil" />
+    </div>
+    <div>
+      <label for="post-url">Last Tire Rotation</label>
+       <input type="text" id="tire" name="tire" />
+    </div>
+    <div>
+      <label for="post-url">Last Spark Plugs</label>
+       <input type="text" id="spark" name="spark" />
+    </div> 
+    <div>
+      <label for="post-url">Last Air Filter</label>
+       <input type="text" id="air" name="air" />
+    </div> 
+    <div>
+      <label for="post-url">Notes</label>
+       <input type="text" id="notes" name="notes" />
+    </div> 
+     <button type="submit" class="btn">Create</button>
+  </form>
+ </section>
+
+ <section> 
+ 
+<div>{{> maint-log vehicles}} </div>
+
+</section>
+<script src="/javascript/add-maint-log.js"  ></script>
+

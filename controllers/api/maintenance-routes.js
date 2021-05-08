@@ -17,20 +17,24 @@ router.get('/' ,(req, res) => {
 
 
 router.post('/', (req, res) => {
+    console.log(req.body)
+    if(req.session) { 
     MaintLog.create({
-        last_oil_change: req.body.last_oil_change,
-        last_tire_rotation: req.body.last_tire_rotation,
-        last_spark_plugs: req.body.last_spark_plugs,
-        last_air_filter: req.body.last_air_filter,
+        last_oil_change: req.body.oil,
+        last_tire_rotation: req.body.tire,
+        last_spark_plugs: req.body.plugz,
+        last_air_filter: req.body.filter,
         notes: req.body.notes,
-        vehicle_id: req.body.vehicle_id,
+        vehicle_id: req.session.vehicle_id,
         owner_id: req.session.owner_id
+
     })
     .then(newMaintLog => res.json(newMaintLog))
     .catch(err => {
         console.log(err);
         res.status(500).json(err)
     })
+   }
 });
 
 router.delete('/:id',  (req, res) => {

@@ -33,7 +33,7 @@ MaintLog.init(
       },
       notes: {
           type: DataTypes.STRING,
-          allowNull: true 
+          allowNull: false, 
       },
       vehicle_id:{
           type: DataTypes.INTEGER,
@@ -53,6 +53,7 @@ MaintLog.init(
     },
     {
         sequelize,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'maintlog'
