@@ -4,7 +4,7 @@
   
   body,
   html {
-    /*background-image: url(../Images/road.jpeg);*/
+    background-image: url(../Images/road.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
