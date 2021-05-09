@@ -46,6 +46,34 @@ router.post('/', (req, res) => {
     });
 });
 
+router.put('/:id', (req,res) =>{
+    Vehicle.update(
+{
+   make: req.body.make,
+   model: req.body.model,
+   year: req.body.year 
+},
+{
+    where: {
+        id: req.params.id
+    }
+}
+    )
+    .then(dbVehicleData => {
+        if (!dbVehicleData) {
+            res.status(404).json({message: 'no vehicles with this id'});
+            return;
+        }
+        res.json(dbVehicleData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+
+
 router.delete('/:id', (req,res) => {
     Vehicle.destroy({
         where:{

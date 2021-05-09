@@ -31,8 +31,8 @@
     {{#each vehicle as |vehicles|}}
     <li>
     {{> vehicle-info vehicles}}
+    <a href='/dashboard/edit/{{id}}' class="edit-link">Edit vehicle</a>
       <a href="/maintlog" class="edit-link">maintenance log</a>
-      
       </li>
     {{/each}}
   </ol>

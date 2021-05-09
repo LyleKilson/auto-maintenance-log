@@ -1,1 +1,0 @@
-// front end js for deletind a maintenace log

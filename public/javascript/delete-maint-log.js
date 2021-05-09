@@ -1,11 +1,13 @@
-// front end js for deleteing vehicle
-async function deleteVehicle(event) {
+// front end js for deletind a maintenace log
+
+async function deleteLog(event) {
     event.preventDefault();
-    const id = window.location.toString().split('/')[
+
+     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
       ];
 
-      const response = await fetch(`/api/vehicle/${id}`, {
+      const response = await fetch(`/api/maintlogs/${id}`, {
           method: 'DELETE'
       })
 
@@ -14,6 +16,7 @@ async function deleteVehicle(event) {
       } else {
           alert(response.statusText)
       }
+
 };
 
-document.querySelector('.delete').addEventListener('click', deleteVehicle);
+document.querySelector('.delete').addEventListener('click', deleteLog);

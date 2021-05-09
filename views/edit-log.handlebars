@@ -1,0 +1,38 @@
+<article>
+    <a href="/dashboard"> &larr; Back to dashboard </a>
+    <h2>
+        Edit Log
+    </h2>
+    <form class="edit-log-form">
+        <div>
+                     <div>
+                         <label for="post-title">last oil change</label>
+            <input name="oil" type="text" value="{{log.last_oil_change}}"/>
+                      </div>
+                      <div>
+                        <label for="post-title">last tire rotation</label>  
+            <input name="tire" type="text" value="{{log.last_tire_rotation}}"/>
+                      </div>
+                      <div> 
+                        <label for="post-title">last spark plugs</label>  
+            <input name="spark" type="text" value="{{log.last_spark_plugs}}"/>
+                       </div>
+                       <div>
+                         <label for="post-title">last air filter</label>   
+            <input name="air" type="text" value="{{log.last_air_filter}}"/>
+                        </div>
+                        <div> 
+                    <label for="post-title">car notes</label>  
+            <input name="notes" type="text" value="{{log.notes}}"/>
+                        </div>
+            
+        </div>
+        
+        <button type="submit">Save log</button>
+        <button type="button" class="delete">Delete log</button>
+    </form>
+    
+   
+</article>
+<script src="/javascript/edit-maint-log.js"></script>
+<script src="/javascript/delete-maint-log.js"></script>

@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
         last_spark_plugs: req.body.plugz,
         last_air_filter: req.body.filter,
         notes: req.body.notes,
-        vehicle_id: req.session.vehicle_id,
+        vehicle_id: req.body.vehicle_id,
         owner_id: req.session.owner_id
 
     })
@@ -37,6 +37,35 @@ router.post('/', (req, res) => {
     })
    }
 });
+
+router.put('/:id', (req,res) =>{
+    MaintLog.update(
+{
+    last_oil_change: req.body.oil,
+    last_tire_rotation: req.body.tire,
+    last_spark_plugs: req.body.plugz,
+    last_air_filter: req.body.filter,
+    notes: req.body.notes  
+},
+{
+    where: {
+        id: req.params.id
+    }
+}
+    )
+    .then(dbMaintData => {
+        if (!dbMaintData) {
+            res.status(404).json({message: 'no log with this id'});
+            return;
+        }
+        res.json(dbMaintData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 
 router.delete('/:id',  (req, res) => {
     MaintLog.destroy({

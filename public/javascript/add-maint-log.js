@@ -25,6 +25,7 @@ async function maintHandler(event) {
             })
             if(response.ok) {
                 console.log(response);
+                document.location.replace('/maintlog');
             }else{
                 alert(response.statusText)
             }

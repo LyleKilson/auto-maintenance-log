@@ -2,9 +2,15 @@
 <section>
 <div>
 <h2>Welcome to the one and only Auto-maintenance log it's Fantastic! Everyone thinks so. </h2>
+{{#if loggedIn}}
+<div> 
+<h3>What are you waiting for? head over to the dashboard and add some vehicles</h3>
+</div>
+{{else}}
 <div>
     <a href="/signup">Do yoursef a favor and sign up now</a>
     <a href="/login">Already a happy member thats great! go ahead and log in</a>
 </div>
+{{/if}}
 </div>
 </section>
