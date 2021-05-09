@@ -3,7 +3,7 @@ async function editVehicle(event) {
 
     const make = document.querySelector('#make').value.trim();
     const model = document.querySelector('#model').value.trim();
-    const year = document.querySelector('#year').value.t
+    const year = document.querySelector('#year').value
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
       ];

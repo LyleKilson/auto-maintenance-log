@@ -57,7 +57,7 @@ router.get('/edit/:id', auth, (req, res) => {
         // pass to template
         res.render('vehicle-edit', {
             vehicle,
-            loggedin: req.session.loggedIn 
+            loggedIn: req.session.loggedIn
         });
     })
     .catch(err => {
