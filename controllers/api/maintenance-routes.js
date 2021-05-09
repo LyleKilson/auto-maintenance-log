@@ -20,6 +20,7 @@ router.post('/', (req, res) => {
     console.log(req.body)
     if(req.session) { 
     MaintLog.create({
+        // req.body values should be the same as front end values in request
         last_oil_change: req.body.oil,
         last_tire_rotation: req.body.tire,
         last_spark_plugs: req.body.plugz,

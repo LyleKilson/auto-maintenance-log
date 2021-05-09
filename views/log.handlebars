@@ -24,11 +24,12 @@
      <button type="submit" class="btn">Create</button>
   </form>
  </section>
-
+{{#if maintlog.length}}
  <section> 
- 
-<div>{{> maint-log vehicles}} </div>
-
+ {{#each maintlog as |maintlog|}}
+<div>{{> maint-log maintlog}} </div>
+{{/each}}
 </section>
+{{/if}}
 <script src="/javascript/add-maint-log.js"  ></script>
 
