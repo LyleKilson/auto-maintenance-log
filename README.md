@@ -14,7 +14,7 @@ A simple web application that keeps track of your personal or fleet vehicle info
 - Heroku
 
 ## Preview
-![](public/images/auto-maintenance-log.png)
+![](auto-maintenance-log.png)
 
 ## Preview Link
 https://thawing-spire-60901.herokuapp.com/maintlog
