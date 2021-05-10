@@ -17,7 +17,7 @@ A simple web application that keeps track of your personal or fleet vehicle info
 ![](public/images/auto-maintenance-log.png)
 
 ## Preview Link
-Preivew auto-maintenance-log [here!]
+https://thawing-spire-60901.herokuapp.com/maintlog
 
 ## Contributions 
 Made with big 🧠 's by **Luisianna Barrios**, **Sebastian Bowen**, **Caroline Phillips**, and **Kyle Wilson**
