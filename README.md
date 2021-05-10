@@ -1,8 +1,8 @@
 # auto-maintenance-log
-Vehicle Maintenance Log Web Application
+Auto Maintenance Log Web Application
 
 ## Summary 
-A simple web application that keeps track of your personal or fleet vehicle information, required preventative maintenance, and other sensitive information.  
+A simple web application that keeps track of your personal or fleet vehicle information such as: your last oil change, tire rotation, and sparkplug.  
 
 ## Powered By
 - MySQL 
@@ -14,10 +14,10 @@ A simple web application that keeps track of your personal or fleet vehicle info
 - Heroku
 
 ## Preview
-🥸
+![](auto-maintenance-log.png)
 
 ## Preview Link
-Preivew auto-maintenance-log [here!]
+https://thawing-spire-60901.herokuapp.com/maintlog
 
 ## Contributions 
 Made with big 🧠 's by **Luisianna Barrios**, **Sebastian Bowen**, **Caroline Phillips**, and **Kyle Wilson**
